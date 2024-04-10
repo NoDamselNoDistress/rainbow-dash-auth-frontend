@@ -3,7 +3,8 @@ import React from 'react';
 import Header from '../Header/header.jsx';
 import { LuMoon, LuUserX } from "react-icons/lu";
 
-const MainComponent = () => {
+
+export default function Login(){
     return (
         <div>
             <main>
@@ -48,5 +49,3 @@ const MainComponent = () => {
         </div>
     );
 };
-
-export default MainComponent;

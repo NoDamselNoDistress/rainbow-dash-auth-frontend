@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import header from "./Components/Header/header.jsx";
-import login from "./Components/Login/Login.jsx";
+import Login from "./Components/Login/login.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <header darkMode={false} />
       <div id="mainContainer">
         <Routes>
-          <Route path='/login' element={<login />}></Route>
+          <Route path='/login' element={<Login />}></Route>
         </Routes>
       </div>
     </Router>
