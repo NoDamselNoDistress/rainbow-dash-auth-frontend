@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+.header-root {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 1rem;
+
+    border-bottom: 2px solid hsl(var(--border));
+
+    background-color: hsl(var(--background));
+}
+
+.header-root * {
+    transition: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.header-root button {
+    cursor: pointer;
+    color: hsl(var(--foreground))
+}
+
+.header-root img {
+    padding: .2rem .8rem;
+
+    border-radius: 14px;
+}
+
+.header-root a:hover img {
+    background-color: hsl(var(--border));
+}
+
+.header-root > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header-root .dropdown-content[data-show="false"] {
+    visibility: hidden;
+}
+
+.header-root .dropdown-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 8%;
+    padding: .8rem .4rem;
+    z-index: 99999;
+
+    border: 2px solid hsl(var(--border));
+    border-radius: 1rem;
+
+    transform: translate(-70%, 5%);
+    offset-anchor: left;
+
+    background-color: hsl(var(--card));
+}
+
+.header-root .dropdown-content button {
+    font-size: 16px;
+    padding: .6rem;
+
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-radius: .6rem;
+}
+.header-root .dropdown-content button:hover {
+    background-color: hsl(var(--border));
+}
+
+#header-user-dropdown #log-out {
+    color: hsl(var(--destructive));
+}
+
+#header-dark-mode {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 3rem;
+    width: 3rem;
+
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+
+    background-color: hsl(var(--background));
+}
+
+#header-dark-mode:hover {
+    background-color: hsl(var(--border));
+}
+
+#header-user {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 3rem;
+    width: 3rem;
+
+    background-color: hsl(var(--border));
+
+    border-radius: 9999px;
+    border: none;
+}
+
+#overlay-trigger {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#overlay-trigger[data-show="true"] {
+    display: block;
+}
